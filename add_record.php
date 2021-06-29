@@ -33,11 +33,16 @@ if (isset($_POST['save'])) {
                 </tr>
                 <tr>
                     <td>Category</td>
-                    <td><input type="text" name="category" placeholder="Food" required></td>
+                    <td><select name="category" >
+                        <option value="Food And Beverage">Food And Beverage</option>
+                        <option value="Transportation">Transportation</option>
+                        <option value="Bill">Bill</option>
+                        <option value="Entertaiment">Entertaiment</option>
+                    </select></td>
                 </tr>
                 <tr>
                     <td>Amount</td>
-                    <td><input type="text" name="amount" required></td>
+                    <td><input type="number" name="amount" required></td>
                 </tr>
                 <tr>
                     <td><button type="submit" name="save">Save</button></td>

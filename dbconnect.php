@@ -31,9 +31,3 @@ if (!mysqli_query($conn, $table)) {
     echo "Error creating table: " . mysqli_error($conn);
 }
 
-echo "Database status: ";
-if ($conn) {
-    echo "Connected";
-} else {
-    echo "Not Connected";
-}

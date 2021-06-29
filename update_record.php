@@ -41,11 +41,17 @@ if (isset($_POST['update'])) {
                 </tr>
                 <tr>
                     <td>Category</td>
-                    <td><input type="text" name="category" value="<?= $record[0]['category']; ?>" required></td>
+                    <td><select name="category"  >
+                        <option <?php if($record[0]['category'] == 'Food And Beverage'){echo("selected");}?>>Food And Beverage</option> 
+                        <option <?php if($record[0]['category'] == 'Transportation'){echo("selected");}?>>Transportation</option> 
+                        <option <?php if($record[0]['category'] == 'Bill'){echo("selected");}?>>Bill</option> 
+                        <option <?php if($record[0]['category'] == 'Entertaiment'){echo("selected");}?>>Entertaiment</option> 
+                    </select></td>
+                    
                 </tr>
                 <tr>
                     <td>Amount</td>
-                    <td><input type="text" name="amount" value="<?= $record[0]['amount']; ?>" required></td>
+                    <td><input type="number" name="amount" value="<?= $record[0]['amount']; ?>" required></td>
                 </tr>
                 <tr>
                     <td><button type="submit" name="update">Update</button></td>
