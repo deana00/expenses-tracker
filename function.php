@@ -28,8 +28,6 @@ function read($query)
         while ($row = mysqli_fetch_assoc($result)) {
             $data[] = $row;
         }
-    } else {
-        echo "No results";
     }
     return $data;
 }
